@@ -39,6 +39,16 @@ function App() {
             Code
           </motion.h1>
         </div>
+        <div id="text-motion">
+          <h1>
+            <motion.span>M</motion.span>
+            <motion.span>o</motion.span>
+            <motion.span>t</motion.span>
+            <motion.span>i</motion.span>
+            <motion.span>o</motion.span>
+            <motion.span>n</motion.span>
+          </h1>
+        </div>
 
         <div id="bg-waves">
           <svg

@@ -33,6 +33,14 @@
   transform: translateX(-50%);
 }
 
+#text-motion {
+  position: absolute;
+  top: 394px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
 @keyframes rotate {
   to {
     transform: rotate(-360deg);
