@@ -1,6 +1,7 @@
 import "./App.css";
 import { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
+import { motion, useMotionValueEvent } from "framer-motion";
 
 import brettLogo from "/brett-holcomb.svg";
 import vertexShader from "./vertexShader.glsl?raw";
@@ -43,21 +44,43 @@ function App() {
           <img src={brettLogo} alt="Brett Holcomb" />
         </div>
 
-        <h1 id="text-ux">UX</h1>
-        <h1 id="text-code">Code</h1>
+        <div id="text-ux">
+          <motion.h1
+            initial={{ opacity: 0, scale: 3, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              delay: 1,
+              type: "spring",
+              duration: 1,
+              bounce: 0.5,
+            }}
+          >
+            UX
+          </motion.h1>
+        </div>
+        <div id="text-code">
+          <motion.h1
+            initial={{ opacity: 0, scale: 3, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              delay: 2,
+              type: "spring",
+              duration: 1,
+              bounce: 0.5,
+            }}
+          >
+            Code
+          </motion.h1>
+        </div>
 
         <div id="bg-waves">
-          {/* <Canvas camera={{ position: [0.0, 0.0, 1.0] }}>
-            <BgWaves />
-          </Canvas> */}
-
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1600"
             height="200"
             fill="none"
           >
-            <g clip-path="url(#a)">
+            <g clipPath="url(#a)">
               <path
                 id="wave-1"
                 fill="#EF8C69"
@@ -87,7 +110,7 @@ function App() {
             height="200"
             fill="none"
           >
-            <g clip-path="url(#a)">
+            <g clipPath="url(#a)">
               <path
                 id="wave-1"
                 fill="#EF8C69"
@@ -117,7 +140,7 @@ function App() {
             height="200"
             fill="none"
           >
-            <g clip-path="url(#a)">
+            <g clipPath="url(#a)">
               <path
                 id="wave-1"
                 fill="#EF8C69"
