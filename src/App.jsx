@@ -6,6 +6,12 @@ import linkedIn from "/icon-linked-in.png";
 import introPhoto from "/brett-photo.jpg";
 import brettLogo from "/brett-holcomb.svg";
 
+import playButtonOverlay from "/play-button-overlay.svg";
+import thumbSystems from "/thumb-systems.png";
+import thumbLemur from "/thumb-lemur.png";
+import thumbShaders from "/thumb-shaders.png";
+import thumbMoreMotion from "/thumb-more-motion.png";
+
 const WavePath = () => (
   <motion.path
     animate={{ rotate: -7.5 }}
@@ -136,7 +142,7 @@ function App() {
 
       <div className="intro">
         <div className="grid">
-          <div className="content">
+          <div className="intro-content">
             <h2>A Short Introduction</h2>
             <ul>
               <li>
@@ -196,33 +202,44 @@ function App() {
             </clipPath>
           </defs>
         </svg>
+      </div>
 
-        <div className="grid">
-          <div className="content">
-            <h2>Design Systems + Motion</h2>
-            <p>
-              I worked from existing motion specs for individual components
-              (created by Brandon Wall) to create a mature design system for UI
-              motion across Intuit. Key accomplishments included:
-            </p>
-            <ul>
-              <li>
-                Expanding the set of animations to cover more use cases and
-                better differentiate between product vs. marketing /
-                storytelling animations
-              </li>
-              <li>
-                Creating an open-source library of CSS animations and writing an
-                article detailing the rationale and process
-              </li>
-              <li>
-                Creating documentation and semantic mappings to guide usage
-                across Intuit + working with teams to ensure a consistent motion
-                experience across touchpoints
-              </li>
-            </ul>
+      <div style={{ height: "180px" }} />
+      <div className="grid">
+        <div className="content">
+          <h2>Design Systems + Motion</h2>
+          <p>
+            I worked from existing motion specs for individual components
+            (created by Brandon Wall) to create a mature design system for UI
+            motion across Intuit. Key accomplishments included:
+          </p>
+          <ul>
+            <li>
+              Expanding the set of animations to cover more use cases and better
+              differentiate between product vs. marketing / storytelling
+              animations
+            </li>
+            <li>
+              Creating an open-source library of CSS animations and writing an
+              article detailing the rationale and process
+            </li>
+            <li>
+              Creating documentation and semantic mappings to guide usage across
+              Intuit + working with teams to ensure a consistent motion
+              experience across touchpoints
+            </li>
+          </ul>
+        </div>
+        <div className="video">
+          <div className="thumb">
+            <img
+              className="play-overlay"
+              src={playButtonOverlay}
+              alt="play design systems video"
+            />
+            <img src={thumbSystems} alt="design systems motion" />
           </div>
-          <div className="video"></div>
+          <button>Watch video (44s)</button>
         </div>
       </div>
     </>
