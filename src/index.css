@@ -71,6 +71,9 @@ body {
   letter-spacing: 0.03em;
   color: #563c4f;
 }
+a {
+  color: #563c4f;
+}
 
 h1,
 h2,

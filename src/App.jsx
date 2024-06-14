@@ -210,8 +210,16 @@ function App() {
           <h2>Design Systems + Motion</h2>
           <p>
             I worked from existing motion specs for individual components
-            (created by Brandon Wall) to create a mature design system for UI
-            motion across Intuit. Key accomplishments included:
+            (created by{" "}
+            <a
+              href="https://www.linkedin.com/in/heybwall/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Brandon Wall
+            </a>
+            ) to create a mature design system for UI motion across Intuit. Key
+            accomplishments included:
           </p>
           <ul>
             <li>

@@ -132,7 +132,8 @@
     display: flex;
     justify-content: flex-end;
     img {
-      width: 244px;
+      width: 240px;
+      height: 271px;
       border-radius: 10px;
       border: 12px solid #f2cc6f;
       border-radius: 38px;
