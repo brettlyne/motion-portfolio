@@ -1,3 +1,34 @@
+.linked-in {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+}
+
+.play-control {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  display: flex;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  text-align: left;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  img {
+    margin-top: 2px;
+    margin-right: 6px;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
 .hero {
   width: 1300px;
   height: 580px;
@@ -69,6 +100,10 @@
 #wave-2 {
   animation: rotate 250s linear infinite;
   transform-origin: 800px 6020px;
+}
+#wave-1.paused,
+#wave-2.paused {
+  animation-play-state: paused;
 }
 #wave-3 {
   /* animation: rotate 200s linear infinite; */
