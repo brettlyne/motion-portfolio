@@ -29,6 +29,32 @@
   }
 }
 
+.react-responsive-modal-modal {
+  width: 100% !important;
+  max-width: calc(100vw - 40px) !important;
+  max-height: calc(100vh - 40px) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 8px;
+  overflow: visible !important;
+}
+button.react-responsive-modal-closeButton {
+  top: -10px;
+  right: -10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  transition: transform 0.15s;
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+  }
+}
+.player-wrapper {
+  aspect-ratio: 16 / 9;
+  position: relative;
+  max-height: calc(100vh - 80px) !important;
+  margin: auto;
+}
+
 .hero {
   width: 1300px;
   height: 600px;

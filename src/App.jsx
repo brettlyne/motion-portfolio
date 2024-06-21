@@ -1,6 +1,9 @@
 import "./App.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import "react-responsive-modal/styles.css";
+import { Modal } from "react-responsive-modal";
+import ReactPlayer from "react-player/file";
 
 import linkedIn from "/icon-linked-in.png";
 import introPhoto from "/brett-photo.jpg";
@@ -11,6 +14,8 @@ import thumbSystems from "/thumb-systems.png";
 import thumbLemur from "/thumb-lemur.png";
 import thumbShaders from "/thumb-shaders.png";
 import thumbMoreMotion from "/thumb-more-motion.png";
+
+import systemsVideo from "/quickbooks-animation-library.mp4";
 
 const WavePath = () => (
   <motion.path
@@ -27,6 +32,8 @@ const WavePath = () => (
 );
 
 function App() {
+  const [openModal, setOpenModal] = useState("");
+
   const letters = ["M", "o", "t", "i", "o", "n"];
 
   return (
@@ -82,10 +89,10 @@ function App() {
                 initial={{ y: 140 }}
                 animate={{ y: 0 }}
                 transition={{
-                  delay: 3.25 + index * 0.25,
+                  delay: 3.25 + index * 0.15,
                   type: "spring",
-                  duration: 2.25,
-                  bounce: 0.6,
+                  duration: 2.25 + index * 0.15,
+                  bounce: 0.6 - index * 0.015,
                 }}
               >
                 {letter}
@@ -247,9 +254,29 @@ function App() {
             />
             <img src={thumbSystems} alt="design systems motion" />
           </div>
-          <button>Watch video (44s)</button>
+          <button onClick={() => setOpenModal("qbal")}>
+            Watch video (44s)
+          </button>
         </div>
       </div>
+
+      <Modal
+        open={openModal === "qbal"}
+        onClose={() => setOpenModal("")}
+        center
+      >
+        <div className="player-wrapper">
+          <ReactPlayer
+            className="react-player"
+            width="100%"
+            height="100%"
+            url={systemsVideo}
+            controls
+            playing
+            muted
+          />
+        </div>
+      </Modal>
     </>
   );
 }
