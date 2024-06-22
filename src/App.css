@@ -30,9 +30,9 @@
 }
 
 .react-responsive-modal-modal {
-  width: 100% !important;
-  max-width: calc(100vw - 40px) !important;
-  max-height: calc(100vh - 40px) !important;
+  aspect-ratio: 16 / 9;
+  max-width: calc(100vw - 80px) !important;
+  max-height: calc(100vh - 80px) !important;
   background-color: rgba(0, 0, 0, 0.5) !important;
   border-radius: 8px;
   overflow: visible !important;
@@ -53,10 +53,14 @@ button.react-responsive-modal-closeButton {
   position: relative;
   max-height: calc(100vh - 80px) !important;
   margin: auto;
+  video:focus-visible {
+    outline: none;
+  }
 }
 
 .hero {
-  width: 1300px;
+  width: 100%;
+  max-width: 1300px;
   height: 600px;
   background: linear-gradient(180deg, #ea8c67 0%, #f6d291 100%);
   position: relative;
@@ -145,7 +149,8 @@ button.react-responsive-modal-closeButton {
 }
 
 .intro {
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   background-color: #864775;
   padding: 40px 0;
   position: relative;
@@ -246,5 +251,17 @@ li {
   &:active {
     transform: translate(1px, 2px);
     box-shadow: 1px 2px 0px #ef8c69;
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .grid {
+    max-width: 980px;
+    padding: 0 20px;
+  }
+  .intro p,
+  .intro li {
+    font-size: 20px;
+    line-height: 28px;
   }
 }

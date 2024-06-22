@@ -15,7 +15,17 @@ import thumbLemur from "/thumb-lemur.png";
 import thumbShaders from "/thumb-shaders.png";
 import thumbMoreMotion from "/thumb-more-motion.png";
 
-import systemsVideo from "/quickbooks-animation-library.mp4";
+import qbalVideo from "/quickbooks-animation-library.mp4";
+import lemurVideo from "/lemur-abridged.mp4";
+import shadersVideo from "/hummingbird-abridged.mp4";
+import moreMotionVideo from "/more-intuit-motion.mp4";
+
+const videos = {
+  qbal: qbalVideo,
+  lemur: lemurVideo,
+  shaders: shadersVideo,
+  moreMotion: moreMotionVideo,
+};
 
 const WavePath = () => (
   <motion.path
@@ -212,6 +222,7 @@ function App() {
       </div>
 
       <div style={{ height: "180px" }} />
+
       <div className="grid">
         <div className="content">
           <h2>Design Systems + Motion</h2>
@@ -235,8 +246,23 @@ function App() {
               animations
             </li>
             <li>
-              Creating an open-source library of CSS animations and writing an
-              article detailing the rationale and process
+              Creating an{" "}
+              <a
+                href="https://intuit.github.io/qb-animation-library/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                open-source library
+              </a>{" "}
+              of CSS animations and writing an{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://medium.com/intuit-engineering/delivering-consistent-animations-with-a-design-system-library-323f29f5efc6"
+              >
+                article
+              </a>{" "}
+              detailing the rationale and process
             </li>
             <li>
               Creating documentation and semantic mappings to guide usage across
@@ -245,8 +271,9 @@ function App() {
             </li>
           </ul>
         </div>
+
         <div className="video">
-          <div className="thumb">
+          <div className="thumb" onClick={() => setOpenModal("qbal")}>
             <img
               className="play-overlay"
               src={playButtonOverlay}
@@ -255,22 +282,176 @@ function App() {
             <img src={thumbSystems} alt="design systems motion" />
           </div>
           <button onClick={() => setOpenModal("qbal")}>
-            Watch video (44s)
+            Watch video{" "}
+            <span style={{ fontWeight: 400, fontSize: ".85em" }}>(1 min)</span>
           </button>
         </div>
       </div>
 
-      <Modal
-        open={openModal === "qbal"}
-        onClose={() => setOpenModal("")}
-        center
-      >
+      <div style={{ height: "120px" }} />
+      <div className="grid">
+        <div className="content">
+          <h2>Motion Design for UX Designers</h2>
+          <p>
+            Lemur Motion is a Figma plugin + GSAP-powered web tool that lets
+            designers choreograph new motion designs, collaborate in real time
+            with Motion Designers, and generate ready-to-ship code.
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://lemurcss.web.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                CSS
+              </a>{" "}
+              for the expanded set of entrance & exit presets for Lemur Motion
+            </li>
+          </ul>
+        </div>
+        <div className="video">
+          <div className="thumb" onClick={() => setOpenModal("lemur")}>
+            <img
+              className="play-overlay"
+              src={playButtonOverlay}
+              alt="play lemur video"
+            />
+            <img src={thumbLemur} alt="lemur motion" />
+          </div>
+          <button onClick={() => setOpenModal("lemur")}>
+            Watch video{" "}
+            <span style={{ fontWeight: 400, fontSize: ".85em" }}>
+              (1.5 min)
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div style={{ height: "120px" }} />
+      <div className="grid">
+        <div className="content">
+          <h2>Design + Code with Shaders</h2>
+          <p>
+            Hummingbird is a tool that lets Roku designers create and animate
+            their own custom shaders.{" "}
+          </p>
+          <ul>
+            <li>
+              Previously we were struggling to compress gradient images and
+              shaders ship at &lt; 1% of the file size at 1080p and can be
+              animated
+            </li>
+            <li>
+              We can create custom landing pages within RokuTV for short-term
+              promotions and brand partnerships by updating a few lines of code
+            </li>
+            <li>
+              To complete this project, I learned how to implement GLSL shaders
+              to match visual design comps and how to build a custom RokuTV
+              channel to test frame rates across Roku devices
+            </li>
+          </ul>
+        </div>
+        <div className="video">
+          <div className="thumb" onClick={() => setOpenModal("shaders")}>
+            <img
+              className="play-overlay"
+              src={playButtonOverlay}
+              alt="play shaders tool video"
+            />
+            <img src={thumbShaders} alt="shaders tool" />
+          </div>
+          <button onClick={() => setOpenModal("shaders")}>
+            Watch video{" "}
+            <span style={{ fontWeight: 400, fontSize: ".85em" }}>
+              (1.5 min)
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div style={{ height: "120px" }} />
+      <div className="grid">
+        <div className="content">
+          <h2>More Motion at Intuit</h2>
+          <p>
+            In addition to coded motion using CSS, GSAP, D3, Framer Motion, and
+            other libraries, I also used timeline-based motion tools like After
+            Effects and drove the adoption of Lottie at Intuit by providing
+            coded examples.
+          </p>
+          <p>Projects from this video include:</p>
+          <ul>
+            <li>
+              scroll-driven Lottie{" "}
+              <a
+                href="https://backflip.surge.sh/smooth-animations.html"
+                target="_blank"
+                rel="noreferrer"
+              >
+                marketing experiment
+              </a>
+            </li>
+            <li>
+              Lottie playback control{" "}
+              <a
+                href="https://brettlyne.github.io/lottie-interaction-demo/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                interactive demo
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://brettlyne.github.io/animations-size-comparisons/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                detailed camparison
+              </a>{" "}
+              of animation deliver options{" "}
+            </li>
+            <li>data vis animations in D3</li>
+            <li>
+              <a
+                href="https://codepen.io/des-eng/pen/bzLaKv"
+                target="_blank"
+                rel="noreferrer"
+              >
+                codepen
+              </a>{" "}
+              for the QuickBooks loading spinner in CSS
+            </li>
+            <li>ambient react 3 fiber animation with post processing</li>
+          </ul>
+        </div>
+        <div className="video">
+          <div className="thumb" onClick={() => setOpenModal("moreMotion")}>
+            <img
+              className="play-overlay"
+              src={playButtonOverlay}
+              alt="play more motion video"
+            />
+            <img src={thumbMoreMotion} alt="more motion projects" />
+          </div>
+          <button onClick={() => setOpenModal("moreMotion")}>
+            Watch video{" "}
+            <span style={{ fontWeight: 400, fontSize: ".85em" }}>(3 min)</span>
+          </button>
+        </div>
+      </div>
+
+      <div style={{ height: "180px" }} />
+
+      <Modal open={openModal !== ""} onClose={() => setOpenModal("")} center>
         <div className="player-wrapper">
           <ReactPlayer
             className="react-player"
             width="100%"
             height="100%"
-            url={systemsVideo}
+            url={videos[openModal]}
             controls
             playing
             muted
