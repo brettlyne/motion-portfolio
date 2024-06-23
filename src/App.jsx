@@ -65,12 +65,12 @@ function App() {
 
         <div id="text-ux">
           <motion.h1
-            initial={{ opacity: 0, scale: 0.5, y: 90, x: 180, rotate: 10 }}
+            initial={{ opacity: 0, scale: 0.5, y: 200, x: 100, rotate: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0, x: 0, rotate: 0 }}
             transition={{
               delay: 0.5,
               type: "spring",
-              duration: 4,
+              duration: 3,
               bounce: 0.3,
             }}
           >
@@ -79,12 +79,12 @@ function App() {
         </div>
         <div id="text-code">
           <motion.h1
-            initial={{ opacity: 0, scale: 0.5, y: 60, x: 120, rotate: 10 }}
+            initial={{ opacity: 0, scale: 0.5, y: 200, x: 100, rotate: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0, x: 0, rotate: 0 }}
             transition={{
-              delay: 1.25,
+              delay: 1,
               type: "spring",
-              duration: 4,
+              duration: 3,
               bounce: 0.3,
             }}
           >
@@ -96,10 +96,10 @@ function App() {
             {letters.map((letter, index) => (
               <motion.span
                 key={index}
-                initial={{ y: 140 }}
-                animate={{ y: 0 }}
+                initial={{ y: 140, x: 0 }}
+                animate={{ y: 0, x: 0 }}
                 transition={{
-                  delay: 2.75 + index * 0.15,
+                  delay: 1.75 + index * 0.15,
                   type: "spring",
                   duration: 2.25 + index * 0.15,
                   bounce: 0.6 - index * 0.015,
@@ -265,7 +265,7 @@ function App() {
               detailing the rationale and process
             </li>
             <li>
-              Creating documentation and semantic mappings to guide usage across
+              Creating documentation and semantic labels to guide usage across
               Intuit + working with teams to ensure a consistent motion
               experience across touchpoints
             </li>
@@ -338,18 +338,16 @@ function App() {
           </p>
           <ul>
             <li>
-              Previously we were struggling to compress gradient images and
-              shaders ship at &lt; 1% of the file size at 1080p and can be
-              animated
+              Shaders shipped at 1% the file size of a 1080p gradient image,
+              plus they could be animated
             </li>
             <li>
-              We can create custom landing pages within RokuTV for short-term
+              We created custom landing pages within RokuTV for short-term
               promotions and brand partnerships by updating a few lines of code
             </li>
             <li>
-              To complete this project, I learned how to implement GLSL shaders
-              to match visual design comps and how to build a custom RokuTV
-              channel to test frame rates across Roku devices
+              I implemented GLSL shaders to match visual design comps and built
+              a custom RokuTV channel to test frame rates across Roku devices
             </li>
           </ul>
         </div>
