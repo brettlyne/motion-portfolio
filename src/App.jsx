@@ -65,13 +65,13 @@ function App() {
 
         <div id="text-ux">
           <motion.h1
-            initial={{ opacity: 0, scale: 0.5, y: 200, x: 100, rotate: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0, x: 0, rotate: 0 }}
+            initial={{ opacity: 0, scale: 0.75, y: 40, x: 0, rotate: 0 }}
             transition={{
               delay: 0.5,
               type: "spring",
-              duration: 3,
-              bounce: 0.3,
+              duration: 1.5,
+              bounce: 0.2,
             }}
           >
             UX
@@ -79,13 +79,13 @@ function App() {
         </div>
         <div id="text-code">
           <motion.h1
-            initial={{ opacity: 0, scale: 0.5, y: 200, x: 100, rotate: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0, x: 0, rotate: 0 }}
+            initial={{ opacity: 0, scale: 0.75, y: 40, x: 0, rotate: 0 }}
             transition={{
-              delay: 1,
+              delay: 1.5,
               type: "spring",
-              duration: 3,
-              bounce: 0.3,
+              duration: 1.5,
+              bounce: 0.2,
             }}
           >
             Code
@@ -99,10 +99,10 @@ function App() {
                 initial={{ y: 140, x: 0 }}
                 animate={{ y: 0, x: 0 }}
                 transition={{
-                  delay: 1.75 + index * 0.15,
+                  delay: 2.75 + index * 0.15,
                   type: "spring",
-                  duration: 2.25 + index * 0.15,
-                  bounce: 0.6 - index * 0.015,
+                  duration: 2.25 + index * 0.2,
+                  bounce: 0.4 - index * 0.015,
                 }}
               >
                 {letter}
@@ -407,9 +407,9 @@ function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                detailed camparison
+                detailed comparison
               </a>{" "}
-              of animation deliver options{" "}
+              of animation delivery options{" "}
             </li>
             <li>data vis animations in D3</li>
             <li>
