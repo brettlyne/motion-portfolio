@@ -65,13 +65,13 @@ function App() {
 
         <div id="text-ux">
           <motion.h1
-            initial={{ opacity: 0, scale: 3, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.5, y: 90, x: 180, rotate: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0, x: 0, rotate: 0 }}
             transition={{
-              delay: 1,
+              delay: 0.5,
               type: "spring",
-              duration: 1,
-              bounce: 0.5,
+              duration: 4,
+              bounce: 0.3,
             }}
           >
             UX
@@ -79,13 +79,13 @@ function App() {
         </div>
         <div id="text-code">
           <motion.h1
-            initial={{ opacity: 0, scale: 3, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.5, y: 60, x: 120, rotate: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0, x: 0, rotate: 0 }}
             transition={{
-              delay: 2,
+              delay: 1.25,
               type: "spring",
-              duration: 1,
-              bounce: 0.5,
+              duration: 4,
+              bounce: 0.3,
             }}
           >
             Code
@@ -99,7 +99,7 @@ function App() {
                 initial={{ y: 140 }}
                 animate={{ y: 0 }}
                 transition={{
-                  delay: 3.25 + index * 0.15,
+                  delay: 2.75 + index * 0.15,
                   type: "spring",
                   duration: 2.25 + index * 0.15,
                   bounce: 0.6 - index * 0.015,
